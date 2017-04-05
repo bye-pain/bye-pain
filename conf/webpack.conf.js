@@ -18,7 +18,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        // loader: 'eslint-loader',
         enforce: 'pre'
       },
       {
@@ -49,6 +49,15 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      Waves: 'node-waves',
+      Tether: 'tether',
+      moment: 'moment',
+      'window.Tether': 'tether',
+      'window.moment': 'moment'
+    }),
     FailPlugin,
     new HtmlWebpackPlugin({
       template: conf.path.src('index.html')
@@ -60,6 +69,18 @@ module.exports = {
       debug: true
     })
   ],
+  // devServer: {
+  //   hot: true,
+  //   inline: true,
+  //   port: 3000,
+  //   historyApiFallback: true,
+  //   proxy: {
+  //     '/api': {
+  //       target: 'http://localhost:8080',
+  //       pathRewrite: {'^/api': ''}
+  //     }
+  //   }
+  // },
   devtool: 'source-map',
   output: {
     path: path.join(process.cwd(), conf.paths.tmp),

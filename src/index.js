@@ -1,5 +1,12 @@
 import angular from 'angular';
 import 'todomvc-app-css/index.css';
+import 'mdbootstrap/css/mdb.css';
+
+import 'mdbootstrap/css/bootstrap.css';
+import 'mdbootstrap/css/style.css';
+import 'mdbootstrap/js/bootstrap.js';
+
+import 'mdbootstrap/js/mdb.js';
 
 import {TodoService} from './app/todos/todos';
 import {App} from './app/containers/App';
