@@ -4,7 +4,7 @@ class FormController {
   }
 }
 
-export const Footer = {
+export const Form = {
   template: require('./Form.html'),
   controller: FormController,
   bindings: {
