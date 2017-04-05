@@ -43,6 +43,21 @@ module.exports = {
         loaders: [
           'html-loader'
         ]
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000'
+      },
+      {
+        test: /\.(jpe|png|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+        loader: 'file-loader'
+      },
+      {
+        test: /bootstrap\/js\/src\/.*\.js$/,
+        loaders: [
+          'imports?jQuery=jquery,Tether=tether',
+          'babel?babelrc=true'
+        ]
       }
     ]
   },
