@@ -8,17 +8,11 @@
     </div>
 
     <!--Body-->
-
     <p>{{$ctrl.body}}</p>
     <br>
-
     <!--Body-->
-    <div class="md-form" ng-repeat="input in $ctrl.inputs track by $index">
-      <!--<i class="fa fa-{{input.icon}} prefix"></i>-->
-      <!--<input class="form-control {{input.class}} validate" type="{{input.type}}" id="{{input.id}}" placeholder="{{input.placeholder}}"
-        value="{{input.value}}" input.disabled>
-      <label class="{{input.disabled}}" for="{{input.id}}" data-error="{{input.error}}" data-success="{{input.sucess}}">{{input.label}}</label>-->
 
+    <div class="md-form" ng-repeat="input in $ctrl.inputs track by $index">
       <div class="md-form">
         <i class="fa fa-envelope prefix"></i>
         <input type="{{input.type}}" id="{{input.id}}" class="form-control {{input.class}}" value="{{input.value}}" {{input.disabled}}>
