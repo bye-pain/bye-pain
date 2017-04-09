@@ -1,5 +1,6 @@
 export default class FormController {
   constructor() {
+    this.object = {};
   }
 }
 
@@ -16,6 +17,7 @@ export const Form = {
     sucess: '@',
     error: '@',
     class: '@',
-    inputs: '='
+    inputs: '=',
+    buttons: '='
   }
 };

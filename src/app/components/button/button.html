@@ -1,0 +1,2 @@
+<button <button ng-repeat="btn in $ctrl.buttons track by $index" type="button" 
+class="btn {{btn.class}} waves-effect" ng-click="$ctrl.btnFunction(btn.function, $ctrl.form)" ng-disabled="!$ctrl.form.$valid && btn.disabled">{{btn.label}}</button>

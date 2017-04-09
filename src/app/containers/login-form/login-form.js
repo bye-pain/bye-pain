@@ -5,21 +5,35 @@ class LoginFormController {
 
   init() {
     this._inputs = [{
+      model: 'user',
       type: 'email',
+      minlength: 10,
       id: 1,
       label: 'Login',
-      disabled: 'disabled',
       sucess: 'Sensacional',
-      error: 'Porra Jamelão ve se cadastra certo essa porrra',
-      class: 'validate'
+      error: 'Ex:exemplo@email.com',
+      class: 'validate',
+      required: 'required'
     },
     {
-      type: 'email',
+      model: 'password',
+      type: 'password',
       id: 2,
+      minlength: 8,
       label: 'Senha',
       disabled: false,
-      error: 'Ex:exemplo@email.com',
       class: 'validate'
+    }];
+    this._buttons = [{
+      class: 'btn-outline-info',
+      label: 'Esqueceu a senha?',
+      function: '2'
+    },
+    {
+      class: 'btn-outline-success',
+      label: 'Login',
+      function: '1',
+      disabled: true
     }];
   }
 }

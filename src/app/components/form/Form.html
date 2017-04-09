@@ -1,29 +1,20 @@
-<form class="form">
-  <!--Naked Form-->
-  <div class="card--block">
-    <!--Header-->
-    <div class="text-center">
-      <h3><i class="fa fa-$ctrl.icon"></i>{{$ctrl.description}}</h3>
-      <hr class="mt-2 mb-2">
-    </div>
-
-    <!--Body-->
-    <p>{{$ctrl.body}}</p>
-    <br>
-    <!--Body-->
-
-    <div class="md-form" ng-repeat="input in $ctrl.inputs track by $index">
-      <div class="md-form">
-        <i class="fa fa-envelope prefix"></i>
-        <input type="{{input.type}}" id="{{input.id}}" class="form-control {{input.class}}" value="{{input.value}}" {{input.disabled}}>
-        <label class="disabled" for="{{input.id}}" data-success="{{input.sucess}}" data-error="{{input.error}}">{{input.label}}</label>
+<div class="container">
+  <div class="card-block">
+    <form novalidate class="md-form" name="form">
+      <div class="form-header green-gradient">
+        <h3><i class="fa fa-$ctrl.icon"></i>{{$ctrl.description}}</h3>
       </div>
-    </div>
-
-    <div class="text-center">
-      <button class="btn btn-default">Submit</button>
-    </div>
-
+      <p>{{$ctrl.body}}</p>
+      <br>
+      <div class="md-form" ng-repeat="input in $ctrl.inputs track by $index">
+        <div class="md-form">
+          <i class="fa fa-envelope prefix"></i>
+          <input type="{{input.type}}" id="{{input.id}}" class="form-control {{input.class}}" name="{{input.model}}" ng-model="form[input.model]"
+            ng-value="input.value" required="{{input.required}}" minlength="{{input.minlength}}" maxlength="{{input.maxlength}}">
+          <label for="{{input.id}}" data-success="{{input.sucess}}" data-error="{{input.error || form.error[input.model]}}">{{input.label}}</label>
+        </div>
+      </div>
+      <button-component ng-if="$ctrl.buttons" buttons="$ctrl.buttons" form="form"></button-component>
+    </form>
   </div>
-  <!--Naked Form-->
-</form>
+</div>
