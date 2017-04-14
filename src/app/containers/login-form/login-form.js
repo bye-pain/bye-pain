@@ -1,4 +1,4 @@
-import * as button from '../../constants/ButtonAction';
+import * as button from '../../constants/button-action';
 
 class LoginFormController {
   constructor() {
@@ -6,7 +6,7 @@ class LoginFormController {
   }
 
   login() {
-    console.log("login");
+    
   }
 
   init() {

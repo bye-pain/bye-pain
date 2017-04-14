@@ -1,4 +1,4 @@
-import * as button from '../../constants/ButtonAction';
+import * as button from '../../constants/button-action';
 
 export default class ButtonController {
   /** @ngInject */
