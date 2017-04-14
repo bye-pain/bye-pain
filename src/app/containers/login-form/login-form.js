@@ -1,13 +1,19 @@
+import * as button from '../../constants/ButtonAction';
+
 class LoginFormController {
   constructor() {
     this.init();
   }
 
+  login() {
+    console.log("login");
+  }
+
   init() {
     this._inputs = [{
       model: 'user',
-      type: 'email',
-      minlength: 10,
+      type: 'text',
+      minlength: 2,
       id: 1,
       label: 'Login',
       sucess: 'Sensacional',
@@ -27,15 +33,15 @@ class LoginFormController {
     this._buttons = [{
       class: 'btn-outline-info',
       label: 'Esqueceu a senha?',
-      function: '2'
+      function: button.RESET_PASSWORD
     },
     {
       class: 'btn-outline-success',
       label: 'Login',
-      function: '1',
+      function: this.login,
       disabled: true
     }];
-  }
+  };
 }
 
 export const LoginForm = {

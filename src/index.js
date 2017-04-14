@@ -12,7 +12,6 @@ import routesConfig from './routes';
 
 import 'mdbootstrap/css/bootstrap.css';
 import 'mdbootstrap/css/style.css';
-import 'todomvc-app-css/index.css';
 import 'mdbootstrap/css/mdb.css';
 import './index.scss';
 

@@ -64,15 +64,16 @@
     "style-loader": "^0.13.1",
     "tether": "^1.4.0",
     "url-loader": "^0.5.8",
-    "webpack": "^2.2.1",
-    "webpack-fail-plugin": "^1.0.5"
+    "webpack": "^2.4.1",
+    "webpack-fail-plugin": "^1.0.6"
   },
   "scripts": {
     "build": "gulp",
     "serve": "gulp serve",
     "serve:dist": "gulp serve:dist",
     "test": "gulp test",
-    "test:auto": "gulp test:auto"
+    "test:auto": "gulp test:auto",
+    "start": "webpack --config mywebpack.config.js"
   },
   "eslintConfig": {
     "globals": {
