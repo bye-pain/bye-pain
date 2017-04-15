@@ -2,7 +2,15 @@
   <div class="card-block">
     <form novalidate class="md-form" name="form">
       <div class="form-header green-gradient">
-        <h3><i class="fa fa-$ctrl.icon"></i>{{$ctrl.description}}</h3>
+        <div ng-if="$ctrl.image" class="row">
+          <div class="col-md-9">
+            <h3>{{$ctrl.description}}</h3>
+          </div>
+          <div class="col-md-3">
+            <img class="img-fluid" src="{{$ctrl.image}}" alt="Card image cap">
+          </div>
+        </div>
+        <h3 ng-if="!$ctrl.image"><i class="fa fa-$ctrl.icon"></i>{{$ctrl.description}}</h3>
       </div>
       <p>{{$ctrl.body}}</p>
       <br>

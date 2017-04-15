@@ -1,0 +1,81 @@
+<!--<div class="row card-group">
+  <div class="card col-md-2">
+    <h2>Infos Adicionais</h2>
+  </div>
+  <div class="col-md-8">
+    <user-form></user-form>
+  </div>
+  <div class="card col-md-2">
+    <div class="card-block text-center">
+      <h2>IMC</h2>
+    </div>
+  </div>
+</div>-->
+<div class="row">
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-header success-color-dark white-text">
+        Informações Adicionais
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a class="btn btn-success">Editar Perfil</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card card-success text-center z-depth-2">
+      <div class="card-block">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="md-form">
+              <i class="fa fa-user"></i>
+              <input type="text" id="search" class="form-control">
+              <label class="white-text" for="search">Pesquise Aqui:</label>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="md-form">
+              <button-component ng-if="$ctrl.buttons" buttons="$ctrl.buttons"></button-component>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card text-center">
+      <div class="card-block">
+        <md-table-container>
+          <table md-table>
+            <thead md-head md-order="myOrder">
+              <!-- when the user clicks this cell, the myOrder variable will get the value 'nameToLower' -->
+              <th md-column md-order-by="nameToLower">Dessert (100g serving)</th>
+              <!-- the variable myOrder will not be changed when this cell is clicked -->
+              <th md-column md-numeric>Calories</th>
+            </thead>
+            <tbody md-body>
+              <!-- we can let ng-repeat sort the columns for us -->
+              <tr ng-repeat="dessert in desserts | orderBy: myOrder"></tr>
+            </tbody>
+          </table>
+        </md-table-container>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-header warning-color-dark white-text">
+        <div class="row">
+          <div class="col-md-9">
+            <h4 class="card-title text-center">IMC</h4>
+          </div>
+          <div class="col-md-3">
+            <img class="img-fluid" src="/images/weight balance.png" alt="Card image cap">
+          </div>
+        </div>
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">Seu imc é ÓTIMO, Parabéns.</h4>
+      </div>
+    </div>
+  </div>

@@ -1,10 +1,13 @@
 import angular from 'angular';
 import 'mdbootstrap/js/bootstrap.js';
 import 'mdbootstrap/js/mdb.js';
+import 'angular-material-data-table/dist/md-data-table.min.js';
 
 import {Form} from './app/components/form/form';
+import {NavBar} from './app/components/navbar/navbar';
 import {Button} from './app/components/button/button';
 import {App} from './app/containers/app';
+import {Main} from './app/containers/main/main';
 import {LoginForm} from './app/containers/login-form/login-form';
 import {UserForm} from './app/containers/user-form/user-form';
 import 'angular-ui-router';
@@ -13,6 +16,8 @@ import routesConfig from './routes';
 import 'mdbootstrap/css/bootstrap.css';
 import 'mdbootstrap/css/style.css';
 import 'mdbootstrap/css/mdb.css';
+import 'mdi/css/materialdesignicons.css';
+import 'angular-material-data-table/dist/md-data-table.min.css';
 import './index.scss';
 
 angular
@@ -21,5 +26,7 @@ angular
   .component('appComponent', App)
   .component('loginForm', LoginForm)
   .component('userForm', UserForm)
+  .component('main', Main)
   .component('buttonComponent', Button)
-  .component('formComponent', Form);
+  .component('formComponent', Form)
+  .component('navbarComponent', NavBar);

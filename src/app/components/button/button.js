@@ -2,7 +2,8 @@ import * as button from '../../constants/button-action';
 
 export default class ButtonController {
   /** @ngInject */
-  constructor() {
+  constructor($state) {
+    this.$state = $state;
   }
 
   btnFunction(action, form) {
@@ -20,8 +21,7 @@ export default class ButtonController {
         console.log(button.SEARCH);
         break;
       default:
-        if (typeof (action) === 'function') return action();
-        break;
+        if (typeof (action) === 'function') return action.call(this);
     }
   }
 }

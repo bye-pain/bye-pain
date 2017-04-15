@@ -1,12 +1,14 @@
 import * as button from '../../constants/button-action';
 
 class LoginFormController {
-  constructor() {
+  /** @ngInject */
+  constructor($state) {
+    this.$state = $state;
     this.init();
   }
 
   login() {
-    
+    this.$state.go('main');
   }
 
   init() {

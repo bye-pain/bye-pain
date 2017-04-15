@@ -8,10 +8,14 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('app', {
       url: '/',
-      component: 'loginForm'
+      component: 'appComponent'
+    })
+     .state('main', {
+      url: '/',
+      component: 'main'
     })
      .state('user', {
-      url: '/user',
+      url: '/',
       component: 'userForm'
     });
 }

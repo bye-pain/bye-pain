@@ -18,6 +18,7 @@ export const Form = {
     error: '@',
     class: '@',
     inputs: '=',
-    buttons: '='
+    buttons: '=',
+    image:'@'
   }
 };
