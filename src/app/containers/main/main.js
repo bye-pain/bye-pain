@@ -1,22 +1,21 @@
-// import * as button from '../../constants/button-action';
-
 class MainController {
   /** @ngInject */
   constructor($state, $log) {
     this.$state = $state;
     this.$log = $log;
+    this.viewTable = false;
     this.init();
   }
 
   changeView() {
-    this.$log.info('changeView');
+    this.viewTable = !this.viewTable;
+    this.$log.info(this.viewTable);
   }
 
   init() {
     this.buttons = [{
       class: 'btn-unique',
       label: '',
-      image: '/images/all/view-grid.png',
       function: this.changeView
     }];
     this.desserts = [{

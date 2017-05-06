@@ -11,11 +11,11 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       component: 'appComponent'
     })
     .state('main', {
-      url: '/',
+      url: '/main',
       component: 'main'
     })
     .state('user', {
-      url: '/',
+      url: '/user',
       component: 'userForm'
     });
 }
