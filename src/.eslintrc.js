@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
-    'angular',
-    // 'arbnb'
+    'angular'
   ],
   rules: {
     'angular/no-service-method': 0,

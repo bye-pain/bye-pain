@@ -16,7 +16,7 @@ class MainController {
     this.buttons = [{
       class: 'btn-unique',
       label: '',
-      image: '/images/view-grid.png',
+      image: '/images/all/view-grid.png',
       function: this.changeView
     }];
     this.desserts = [{

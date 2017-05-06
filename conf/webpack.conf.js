@@ -58,6 +58,14 @@ module.exports = {
           'imports?jQuery=jquery,Tether=tether',
           'babel?babelrc=true'
         ]
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader"
       }
     ]
   },
@@ -81,7 +89,7 @@ module.exports = {
       options: {
         postcss: () => [autoprefixer]
       },
-      debug: true
+      debug: true,
     })
   ],
   // devServer: {
