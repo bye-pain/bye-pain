@@ -1,0 +1,11 @@
+<div class="row" ng-repeat="r in $ctrl._rows track by $index">
+  <div ng-repeat="input in r track by $index">
+    <div ngClass="$ctrl.classDiv">
+      <div class="md-form">
+        <i class="fa fa-envelope prefix"></i>
+        <input type="email" id="form91" class="form-control validate">
+        <label for="form91" data-error="wrong" data-success="right">{{input.label}}</label>
+      </div>
+    </div>
+  </div>
+</div>
