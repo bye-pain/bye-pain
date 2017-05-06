@@ -1,27 +1,31 @@
-import * as button from '../../constants/button-action';
-
 export default class ButtonController {
   /** @ngInject */
-  constructor($state) {
+  constructor($state, $log, buttonAction) {
     this.$state = $state;
+    this.$log = $log;
+    this.buttonAction = buttonAction;
   }
 
   btnFunction(action, form) {
     switch (action) {
-      case button.SAVE:
-        console.log(button.SAVE);
+      case this.buttonAction.SAVE:
+        this.$log.warn(this.buttonAction.SAVE);
         break;
-      case button.DELETE:
-        console.log(button.DELETE);
+      case this.buttonAction.DELETE:
+        this.$log.warn(this.buttonAction.DELETE);
         break;
-      case button.RESET_PASSWORD:
-        console.log(button.RESET_PASSWORD);
+      case this.buttonAction.RESET_PASSWORD:
+        this.$log.warn(this.buttonAction.RESET_PASSWORD);
         break;
-      case button.SEARCH:
-        console.log(button.SEARCH);
+      case this.buttonAction.SEARCH:
+        this.$log.warn(this.buttonAction.SEARCH);
         break;
       default:
-        if (typeof (action) === 'function') return action.call(this);
+        if (angular.isFunction(action)) {
+          this.$log.warn(form);
+          return action.call(this);
+        }
+        break;
     }
   }
 }
@@ -32,5 +36,6 @@ export const Button = {
   bindings: {
     buttons: '=',
     form: '='
-  }
+  },
+  restric: 'AE'
 };

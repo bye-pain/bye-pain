@@ -1,14 +1,15 @@
-import * as button from '../../constants/button-action';
+// import * as button from '../../constants/button-action';
 
 class MainController {
   /** @ngInject */
-  constructor($state) {
+  constructor($state, $log) {
     this.$state = $state;
+    this.$log = $log;
     this.init();
   }
 
   changeView() {
-    console.log('changeView');
+    this.$log.info('changeView');
   }
 
   init() {
@@ -31,6 +32,6 @@ class MainController {
 
 export const Main = {
   template: require('./main.html'),
-  controller: MainController,
-  bindings: {}
-}
+  controller: MainController
+};
+

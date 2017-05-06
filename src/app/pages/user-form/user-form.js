@@ -17,6 +17,5 @@ class UserFormController {
 
 export const UserForm = {
   template: require('./user-form.html'),
-  controller: UserFormController,
-  bindings: {}
-}
+  controller: UserFormController
+};

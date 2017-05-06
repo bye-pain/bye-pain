@@ -1,9 +1,8 @@
-import * as button from '../../constants/button-action';
-
 class LoginFormController {
   /** @ngInject */
-  constructor($state) {
+  constructor($state, buttonAction) {
     this.$state = $state;
+    this.buttonAction = buttonAction;
     this.init();
   }
 
@@ -35,7 +34,7 @@ class LoginFormController {
     this._buttons = [{
       class: 'btn-outline-info',
       label: 'Esqueceu a senha?',
-      function: button.RESET_PASSWORD
+      function: this.buttonAction.RESET_PASSWORD
     },
     {
       class: 'btn-outline-success',
@@ -43,11 +42,10 @@ class LoginFormController {
       function: this.login,
       disabled: true
     }];
-  };
+  }
 }
 
 export const LoginForm = {
   template: require('./login-form.html'),
-  controller: LoginFormController,
-  bindings: {}
-}
+  controller: LoginFormController
+};
