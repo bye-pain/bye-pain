@@ -14,15 +14,10 @@
       </div>
       <p>{{$ctrl.body}}</p>
       <br>
-      <div class="md-form" ng-repeat="input in $ctrl.inputs track by $index">
-        <div class="md-form">
-          <input type="{{input.type}}" id="{{input.id}}" class="form-control {{input.class}}" name="{{input.model}}" ng-model="form[input.model]"
-            ng-value="input.value" required="{{input.required}}" minlength="{{input.minlength}}" maxlength="{{input.maxlength}}">
-          <label for="{{input.id}}" data-success="{{input.sucess}}" data-error="{{input.error || form.error[input.model]}}">{{input.label}}</label>
-        </div>
+      <div class="md-form" ng-repeat="input in $ctrl.lines track by $index">
+        <row-component inputs="input" form="form"></row-component>
       </div>
       <button-component ng-if="$ctrl.buttons" buttons="$ctrl.buttons" form="form"></button-component>
     </form>
   </div>
 </div>
-<div class="md-form">

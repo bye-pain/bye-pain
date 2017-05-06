@@ -9,14 +9,16 @@ class MainController {
 
   changeView() {
     this.viewTable = !this.viewTable;
-    this.$log.info(this.viewTable);
+    this.$log.info(`view table = ${this.viewTable}`);
   }
 
   init() {
     this.buttons = [{
       class: 'btn-unique',
       label: '',
-      function: this.changeView
+      function: this.changeView,
+      model: this.viewTable,
+      init: this.viewTable = true
     }];
     this.desserts = [{
       name: 'sidnei',

@@ -17,7 +17,7 @@ export const Form = {
     sucess: '@',
     error: '@',
     class: '@',
-    inputs: '=',
+    lines: '=',
     buttons: '=',
     image: '@'
   },

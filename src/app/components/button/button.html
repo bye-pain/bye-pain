@@ -1,5 +1,5 @@
 <button ng-repeat="btn in $ctrl.buttons track by $index" type="button" class="btn {{btn.class}} waves-effect" ng-click="$ctrl.btnFunction(btn.function, $ctrl.form)"
-  ng-disabled="!$ctrl.form.$valid && btn.disabled">
+  ng-disabled="!$ctrl.form.$valid && btn.disabled" ng-model="btn.model" ng-init="btn.init">
   <img ng-if="btn.image" class="img-fluid" src="/images/view-grid.png" alt="Card image cap">
   {{btn.label}}
   </button>

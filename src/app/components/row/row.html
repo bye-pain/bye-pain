@@ -1,0 +1,7 @@
+<div class="form-inline">
+  <div class="md-form" ng-repeat="input in $ctrl.inputs track by $index">
+    <input type="{{input.type}}" id="{{input.id}}" class="form-control form-inline {{input.class}}" name="{{input.model}}" ng-model="form[input.model]"
+      ng-value="input.value" required="{{input.required}}" minlength="{{input.minlength}}" maxlength="{{input.maxlength}}">
+    <label for="{{input.id}}" data-success="{{input.sucess}}" data-error="{{input.error || form.error[input.model]}}">{{input.label}}</label>
+  </div>
+</div>

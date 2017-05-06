@@ -11,26 +11,39 @@ class LoginFormController {
   }
 
   init() {
-    this._inputs = [{
-      model: 'user',
-      type: 'text',
-      minlength: 2,
-      id: 1,
-      label: 'Login',
-      sucess: 'Sensacional',
-      error: 'Ex:exemplo@email.com',
-      class: 'validate',
-      required: 'required'
-    },
-    {
-      model: 'password',
-      type: 'password',
-      id: 2,
-      minlength: 8,
-      label: 'Senha',
-      disabled: false,
-      class: 'validate'
-    }];
+    this._lines = [
+      [{
+        model: 'user',
+        type: 'text',
+        minlength: 2,
+        id: 1,
+        label: 'Login',
+        sucess: 'Sensacional',
+        error: 'Ex:exemplo@email.com',
+        class: 'validate',
+        required: 'required'
+      },
+      {
+        model: 'password',
+        type: 'password',
+        id: 2,
+        minlength: 8,
+        label: 'Senha',
+        disabled: false,
+        class: 'validate'
+      }],
+      [
+        {
+          model: 'password',
+          type: 'password',
+          id: 2,
+          minlength: 8,
+          label: 'Senha',
+          disabled: false,
+          class: 'validate'
+        }
+      ]
+    ];
     this._buttons = [{
       class: 'btn-outline-info',
       label: 'Esqueceu a senha?',

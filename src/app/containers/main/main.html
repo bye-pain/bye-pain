@@ -23,12 +23,22 @@
           </div>
           <div class="col-md-3">
             <div class="md-form">
-              <button-component ng-if="$ctrl.buttons" buttons="$ctrl.buttons"></button-component>
+              <button type="button" class="btn btn-white waves-effect" ng-click="$ctrl.changeView()">
+                <span ng-if="!$ctrl.viewTable" class="fa fa-search"></span>
+                <span ng-if="$ctrl.viewTable" class="fa fa-table"></span>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <ul ng-if="$ctrl.viewTable" class="animate-if" class="list-group">
+      <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Morbi leo risus</li>
+      <li class="list-group-item">Porta ac consectetur ac</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
   </div>
   <div class="col-md-3">
     <div class="card">
